@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang=\"en\">
+<head>
+  <meta charset=\"utf-8\"/>
+  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/>
+  <title>Timeline - Annmarie</title>
+  <style>
+    :root{--bg:#0a0f1a;--card:#111a2b;--line:#2a7f62;--fg:#e9f0f6}
+    *{box-sizing:border-box}html,body{margin:0;height:100%}body{font-family:Inter, Arial, sans-serif;background:var(--bg);color:var(--fg)}
+    header{padding:1rem 1rem;border-bottom:1px solid #27455f;position:sticky;top:0;background:rgba(6,12,22,.95);z-index:10}
+    header h1{margin:0;font-size:1rem}
+    .container{max-width:900px;margin:20px auto;padding:0 1rem}
+    .timeline{position:relative;margin:2rem 0;padding-left:40px}
+    .timeline:before{content:'';position:absolute;left:18px;top:0;bottom:0;width:4px;background:var(--line);border-radius:2px}
+    .item{position:relative;margin:1rem 0;padding:1rem 1.25rem;background:var(--card);border-radius:.5rem;border:1px solid #223a66}
+    .item h3{margin:0 0 .25rem}
+    .item time{font-size:.8rem;color:#9fb3c8}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Annmarie Hordern</h1>
+  </header>
+  <div class="container">
+    <section class="timeline" aria-label="timeline">
+      <div class="item"><h3>Education</h3><time>2012 - 2016</time><p>Bachelor of Design</p></div>
+      <div class="item"><h3>Experience</h3><time>2017 - 2021</time><p>UI Developer at Acme Co.</p></div>
+      <div class="item"><h3>Projects</h3><time>2022 - Present</time><p>Freelance UX work and visual design</p></div>
+    </section>
+    <button onclick="download()" style="background:#2a9d8f;border:0;color:#fff;padding:.6rem 1rem;border-radius:.25rem;cursor:pointer">Download PDF</button>
+  </div>
+  <script>
+    function download(){const blob=new Blob(['Annmarie Hordern\nResume (demo)'],{type:'application/pdf'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='resume-01.pdf';document.body.appendChild(a);a.click();a.remove();}
+  </script>
+</body>
+</html>
