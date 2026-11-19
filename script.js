@@ -1,0 +1,1 @@
+"use strict";function download(){const blob=new Blob(['Annmarie Hordern\\nResume (demo)'],{type:'application/pdf'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='resume-01.pdf';document.body.appendChild(a);a.click();a.remove();} 
